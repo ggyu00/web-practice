@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>innerText, innerHTML 프로퍼티</title>
+    <style>
+      .donggyu {
+        width: 500px;
+        height: 500px;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="inntext()">innerText로 표시하기</button>
+    <button onclick="innhtml()">innerHTML로 표시하기</button>
+    <h1>현재 시각:</h1>
+    <div id="current"></div>
+    <div class="donggyu">hello</div>
+
+    <script>
+      let current = document.querySelector('#current');
+      let donggyu = document.querySelector('.donggyu');
+      let divs = document.querySelectorAll('div');
+
+      console.log(divs);
+
+      donggyu.style.backgroundColor = 'red';
+      current.style.backgroundColor = 'blue';
+
+      console.log(navigator.userAgent);
+
+      var now = new Date();
+
+      function inntext() {
+        document.getElementById('current').innerText = now;
+      }
+      function innhtml() {
+        document.getElementById('current').innerHTML = '<em>' + now + '</em>';
+      }
+    </script>
+  </body>
+</html>
